@@ -33,4 +33,4 @@ build/
 .vscode/
 
 ### DB details ###
-src/main/resources/db-credentials.properties
+src/main/resources/secrets.properties
