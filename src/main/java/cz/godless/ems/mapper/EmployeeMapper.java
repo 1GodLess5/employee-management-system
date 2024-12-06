@@ -1,24 +1,24 @@
 package cz.godless.ems.mapper;
 
-import cz.godless.ems.domain.Employee;
-import cz.godless.ems.entity.EmployeeEntity;
+import cz.godless.ems.domain.EmployeeDto;
+import cz.godless.ems.entity.Employee;
 
 public class EmployeeMapper {
-    public static Employee mapToEmployee(EmployeeEntity employeeEntity) {
-        return new Employee(
-                employeeEntity.getId(),
-                employeeEntity.getFirstName(),
-                employeeEntity.getLastName(),
-                employeeEntity.getEmail()
-        );
-    }
-
-    public static EmployeeEntity mapToEmployeeEntity(Employee employee) {
-        return new EmployeeEntity(
+    public static EmployeeDto mapToEmployeeDto(Employee employee) {
+        return new EmployeeDto(
                 employee.getId(),
                 employee.getFirstName(),
                 employee.getLastName(),
                 employee.getEmail()
+        );
+    }
+
+    public static Employee mapToEmployee(EmployeeDto employeeDto) {
+        return new Employee(
+                employeeDto.getId(),
+                employeeDto.getFirstName(),
+                employeeDto.getLastName(),
+                employeeDto.getEmail()
         );
     }
 }
