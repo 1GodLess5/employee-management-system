@@ -2,7 +2,6 @@ package cz.godless.ems.controller;
 
 import cz.godless.ems.api.request.EmployeeService;
 import cz.godless.ems.domain.EmployeeDto;
-import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -32,5 +31,10 @@ public class EmployeeController {
     @GetMapping
     public ResponseEntity<List<EmployeeDto>> getAllEmployees() {
         return ResponseEntity.ok(employeeService.getAllEmployees());
+    }
+
+    @PutMapping("{id}")
+    public ResponseEntity<EmployeeDto> updateEmployee(@PathVariable("id") Long employeeId, @RequestBody EmployeeDto updatedEmployee) {
+        return ResponseEntity.ok(employeeService.updateEmployee(employeeId, updatedEmployee));
     }
 }
