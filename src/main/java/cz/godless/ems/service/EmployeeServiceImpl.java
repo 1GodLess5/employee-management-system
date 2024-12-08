@@ -1,5 +1,6 @@
 package cz.godless.ems.service;
 
+import cz.godless.ems.api.exception.ResourceNotFoundException;
 import cz.godless.ems.api.request.EmployeeService;
 import cz.godless.ems.domain.EmployeeDto;
 import cz.godless.ems.entity.Employee;
@@ -9,12 +10,9 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
+@AllArgsConstructor
 public class EmployeeServiceImpl implements EmployeeService {
-    private EmployeeRepository employeeRepository;
-
-    public EmployeeServiceImpl(EmployeeRepository employeeRepository) {
-        this.employeeRepository = employeeRepository;
-    }
+    private final EmployeeRepository employeeRepository;
 
     @Override
     public EmployeeDto createEmployee(EmployeeDto employeeDto) {
@@ -22,5 +20,13 @@ public class EmployeeServiceImpl implements EmployeeService {
         Employee savedEmployee = employeeRepository.save(employee);
 
         return EmployeeMapper.mapToEmployeeDto(savedEmployee);
+    }
+
+    @Override
+    public EmployeeDto getEmployeeById(Long employeeId) {
+        Employee employee = employeeRepository.findById(employeeId)
+                .orElseThrow(() -> new ResourceNotFoundException("Employee with id " + employeeId + " was not found."));
+
+        return EmployeeMapper.mapToEmployeeDto(employee);
     }
 }
