@@ -1,2 +1,2 @@
-# employeeDto-management-system
-Project for practice of Spring Boot and learn React
+# Employee Management System
+Project for the practice of Spring Boot and learning React
