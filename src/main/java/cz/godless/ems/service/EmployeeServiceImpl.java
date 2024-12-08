@@ -48,4 +48,11 @@ public class EmployeeServiceImpl implements EmployeeService {
 
         return EmployeeMapper.mapToEmployeeDto(employeeRepository.save(employee));
     }
+
+    @Override
+    public void deleteEmployee(Long employeeId) {
+        Employee employee = EmployeeMapper.mapToEmployee(getEmployeeById(employeeId));
+
+        employeeRepository.deleteById(employeeId);
+    }
 }
