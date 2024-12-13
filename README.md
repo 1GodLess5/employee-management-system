@@ -1,6 +1,6 @@
 # Employee Management System Backend
 
-The **Employee Management System Backend** is a Spring Boot application designed to provide the server-side functionality for managing employees. This application exposes a REST API to interact with the employee data and supports full CRUD (Create, Read, Update, Delete) operations. <br/><br/>
+The **Employee Management System Backend** is a Spring Boot application that provides server-side functionality for managing employees. This application exposes a REST API to interact with the employee data and supports full CRUD (Create, Read, Update, Delete) operations. <br/><br/>
 You can find the frontend here: [Employee Management System Frontend](https://github.com/1GodLess5/employee-management-system-frontend).
 
 ---
@@ -8,7 +8,8 @@ You can find the frontend here: [Employee Management System Frontend](https://gi
 ## Features
 
 - **REST API**: Exposes endpoints for managing employees.
-- **Database Integration**: Uses JPA for interaction with the database.
+- **Database Integration**: Uses JPA to interact with the database.
+- **Database Migrations**: Utilizes Flyway to manage database migrations, ensuring consistent schema updates.
 - **Error Handling**: Implements a global exception handler for consistent API responses.
 
 ---
@@ -19,6 +20,8 @@ You can find the frontend here: [Employee Management System Frontend](https://gi
 - **Spring Boot**
 - **Spring Data JPA**
 - **MySQL**
+- **Flyway**
+- **Railway**
 
 ---
 
