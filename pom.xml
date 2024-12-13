@@ -64,6 +64,10 @@
 			<artifactId>hibernate-core</artifactId>
 			<version>6.6.2.Final</version>
 		</dependency>
+		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-mysql</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -80,6 +84,11 @@
 						</path>
 					</annotationProcessorPaths>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.flywaydb</groupId>
+				<artifactId>flyway-maven-plugin</artifactId>
+				<version>10.17.0</version>
 			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
