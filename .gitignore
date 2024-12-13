@@ -34,3 +34,6 @@ build/
 
 ### DB details ###
 src/main/resources/secrets.properties
+
+### Flyway Configuration ###
+flyway.conf
