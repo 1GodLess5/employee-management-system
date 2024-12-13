@@ -1,6 +1,7 @@
 # Employee Management System Backend
 
-The **Employee Management System Backend** is a Spring Boot application designed to provide the server-side functionality for managing employees. This application exposes a REST API to interact with the employee data and supports full CRUD (Create, Read, Update, Delete) operations. You can find the frontend here: [Employee Management System Frontend](https://github.com/1GodLess5/employee-management-system-frontend).
+The **Employee Management System Backend** is a Spring Boot application designed to provide the server-side functionality for managing employees. This application exposes a REST API to interact with the employee data and supports full CRUD (Create, Read, Update, Delete) operations. <br/><br/>
+You can find the frontend here: [Employee Management System Frontend](https://github.com/1GodLess5/employee-management-system-frontend).
 
 ---
 
@@ -20,21 +21,12 @@ The **Employee Management System Backend** is a Spring Boot application designed
 - **MySQL**
 
 ---
-## API Endpoints
 
-### Base URL
-```
-/api/employees
-```
+## API Documentation
 
-### Endpoints
+You can explore and interact with the API using the Swagger UI provided by the application. To access the Swagger UI, navigate to the following URL in your browser:
 
-| Method | Endpoint           | Description            |
-|--------|--------------------|------------------------|
-| GET    | `/`                | Fetch all employees    |
-| GET    | `/{id}`            | Fetch employee by ID   |
-| POST   | `/`                | Create a new employee  |
-| PUT    | `/{id}`            | Update employee by ID  |
-| DELETE | `/{id}`            | Delete employee by ID  |
+[Swagger UI - Employee Management System Backend](https://ems-web-api-production.up.railway.app/swagger-ui/index.html)
+
 
 ---
